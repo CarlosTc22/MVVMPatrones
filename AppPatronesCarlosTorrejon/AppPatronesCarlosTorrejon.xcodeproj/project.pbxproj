@@ -13,6 +13,9 @@
 		072A58BC2AD0299200B2AA47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072A58BA2AD0299200B2AA47 /* LaunchScreen.storyboard */; };
 		072A58C92AD02C7D00B2AA47 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A58C72AD02C7D00B2AA47 /* SplashViewController.swift */; };
 		072A58CA2AD02C7D00B2AA47 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 072A58C82AD02C7D00B2AA47 /* SplashViewController.xib */; };
+		072A58D32AD0496B00B2AA47 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A58D22AD0496B00B2AA47 /* SplashViewModel.swift */; };
+		072A58D72AD04D8F00B2AA47 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A58D52AD04D8F00B2AA47 /* HomeTableViewController.swift */; };
+		072A58D82AD04D8F00B2AA47 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 072A58D62AD04D8F00B2AA47 /* HomeTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		072A58BD2AD0299200B2AA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072A58C72AD02C7D00B2AA47 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		072A58C82AD02C7D00B2AA47 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		072A58D22AD0496B00B2AA47 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		072A58D52AD04D8F00B2AA47 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		072A58D62AD04D8F00B2AA47 /* HomeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		072A58CD2AD02D4A00B2AA47 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				072A58D42AD04D5B00B2AA47 /* Home */,
 				072A58CE2AD02D5900B2AA47 /* Splash */,
 			);
 			path = UI;
@@ -102,6 +109,7 @@
 		072A58CF2AD02DD100B2AA47 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				072A58D22AD0496B00B2AA47 /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -121,6 +129,15 @@
 				072A58C72AD02C7D00B2AA47 /* SplashViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		072A58D42AD04D5B00B2AA47 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				072A58D52AD04D8F00B2AA47 /* HomeTableViewController.swift */,
+				072A58D62AD04D8F00B2AA47 /* HomeTableViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072A58D82AD04D8F00B2AA47 /* HomeTableViewController.xib in Resources */,
 				072A58BC2AD0299200B2AA47 /* LaunchScreen.storyboard in Resources */,
 				072A58CA2AD02C7D00B2AA47 /* SplashViewController.xib in Resources */,
 				072A58B92AD0299200B2AA47 /* Assets.xcassets in Resources */,
@@ -197,6 +215,8 @@
 				072A58C92AD02C7D00B2AA47 /* SplashViewController.swift in Sources */,
 				072A58B02AD0299200B2AA47 /* AppDelegate.swift in Sources */,
 				072A58B22AD0299200B2AA47 /* SceneDelegate.swift in Sources */,
+				072A58D32AD0496B00B2AA47 /* SplashViewModel.swift in Sources */,
+				072A58D72AD04D8F00B2AA47 /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
