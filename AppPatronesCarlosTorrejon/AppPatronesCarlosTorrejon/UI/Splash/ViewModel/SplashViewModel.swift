@@ -7,21 +7,22 @@
 
 import Foundation
 
-
-//MARK: - PROTOCOLO -
+//MARK: - PROTOCOLO
 protocol SplashViewModelProtocol {
-    func onViewLoaded()
+    func onViewsLoaded()
 }
+
 
 
 //MARK: - CLASE -
 final class SplashViewModel {
     
-    private weak var  viewDelegate: SplashViewProtocol?
+    private weak var viewDelegate: SplashViewProtocol?
     
     init(viewDelegate: SplashViewProtocol?) {
         self.viewDelegate = viewDelegate
     }
+
     
     private func loadData() {
         viewDelegate?.showLoading(true)
@@ -33,11 +34,13 @@ final class SplashViewModel {
 }
 
 
+
 //MARK: - EXTENSION -
 extension SplashViewModel: SplashViewModelProtocol {
-    func onViewLoaded() {
+    func onViewsLoaded() {
         loadData()
     }
     
     
 }
+

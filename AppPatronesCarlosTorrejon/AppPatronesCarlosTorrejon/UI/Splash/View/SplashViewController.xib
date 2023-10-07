@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="AppPatronesCarlosTorrejon" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="PUS-tp-9bu" id="9mb-yC-yAe"/>
+                <outlet property="activituIndicator" destination="PUS-tp-9bu" id="7IA-JT-nVS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
