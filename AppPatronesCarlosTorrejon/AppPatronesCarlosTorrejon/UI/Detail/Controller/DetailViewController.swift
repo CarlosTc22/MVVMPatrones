@@ -15,18 +15,17 @@ protocol DetailViewProtocol: AnyObject {
 //MARK: - CLASE -
 class DetailViewController: UIViewController {
 
-    // Suponemos que tienes una etiqueta y una imagen para mostrar el nombre e imagen del personaje.
-    @IBOutlet weak var characterNameLabel: UILabel!
-    @IBOutlet weak var characterImageView: UIImageView!
-    @IBOutlet weak var characterDescriptionLabel: UILabel!
+    @IBOutlet weak var appleNameLabel: UILabel!
+    @IBOutlet weak var appleDescriptionLabel: UILabel!
+    @IBOutlet weak var appleImageView: UIImageView!
     
     var viewModel: DetailViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        characterDescriptionLabel.numberOfLines = 0
-        characterDescriptionLabel.lineBreakMode = .byWordWrapping
+        appleDescriptionLabel.numberOfLines = 0
+        appleDescriptionLabel.lineBreakMode = .byWordWrapping
         
         viewModel?.onViewsLoaded()
     }
@@ -35,10 +34,10 @@ class DetailViewController: UIViewController {
 //MARK: - EXTENSION -
 extension DetailViewController: DetailViewProtocol {
     func updateViews() {
-        characterNameLabel.text = viewModel?.characterData?.name
-        if let imageName = viewModel?.characterData?.image {
-            characterImageView.image = UIImage(named: imageName)
+        appleNameLabel.text = viewModel?.appleData?.name
+        if let imageName = viewModel?.appleData?.image {
+            appleImageView.image = UIImage(named: imageName)
         }
-        characterDescriptionLabel.text = viewModel?.characterData?.description
+        appleDescriptionLabel.text = viewModel?.appleData?.description
     }
 }

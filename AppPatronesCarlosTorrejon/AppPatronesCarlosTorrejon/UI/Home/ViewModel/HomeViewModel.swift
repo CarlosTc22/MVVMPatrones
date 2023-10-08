@@ -12,7 +12,7 @@ import Foundation
 protocol HomeViewModelProtocol {
     var dataCount: Int { get }
     func onViewsLoaded()
-    func data(at index: Int) -> CharacterModel?
+    func data(at index: Int) -> AppleModel?
     func onItemSelected(at index: Int)
 }
 
@@ -23,14 +23,14 @@ protocol HomeViewModelProtocol {
 final class HomeViewModel {
     
     private weak var viewDelegate: HomeViewProtocol?
-    private var viewData = CharactersModel()
+    private var viewData = AppleCollection()
     
     init(viewDelegate: HomeViewProtocol? = nil) {
         self.viewDelegate = viewDelegate
     }
     
     private func loadData() {
-        viewData = sampleCharacterData
+        viewData = sampleAppleData
         viewDelegate?.updateViews()
     }
     
@@ -45,7 +45,7 @@ extension HomeViewModel: HomeViewModelProtocol {
     }
     
     
-    func data(at index: Int) -> CharacterModel? {
+    func data(at index: Int) -> AppleModel? {
         guard index < dataCount else { return nil }
         return viewData[index]
     }

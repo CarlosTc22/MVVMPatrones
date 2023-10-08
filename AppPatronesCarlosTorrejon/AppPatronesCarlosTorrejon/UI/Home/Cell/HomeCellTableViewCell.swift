@@ -26,7 +26,7 @@ class HomeCellTableViewCell: UITableViewCell {
     }
     
     
-    func updateViews(data: CharacterModel?) {
+    func updateViews(data: AppleModel?) {
         update(name: data?.name)
         update(image: data?.image)
     }

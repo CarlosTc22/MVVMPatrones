@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="AppPatronesCarlosTorrejon" customModuleProvider="target">
             <connections>
-                <outlet property="characterDescriptionLabel" destination="zSm-xq-cjR" id="n8I-42-Fgn"/>
-                <outlet property="characterImageView" destination="j2J-zf-o18" id="fyh-hw-7W9"/>
-                <outlet property="characterNameLabel" destination="aMf-kP-ddC" id="GwQ-R5-Nn7"/>
+                <outlet property="appleDescriptionLabel" destination="zSm-xq-cjR" id="p5v-2o-GYx"/>
+                <outlet property="appleImageView" destination="j2J-zf-o18" id="8e7-yt-gJ5"/>
+                <outlet property="appleNameLabel" destination="aMf-kP-ddC" id="oSp-BE-10z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,20 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j2J-zf-o18">
-                    <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j2J-zf-o18">
+                    <rect key="frame" x="0.0" y="59" width="393" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="Vgv-Ea-0tI"/>
+                        <constraint firstAttribute="height" constant="200" id="Vgv-Ea-0tI"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMf-kP-ddC">
-                    <rect key="frame" x="20" y="367" width="353" height="21"/>
+                    <rect key="frame" x="20" y="267" width="353" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSm-xq-cjR">
-                    <rect key="frame" x="20" y="396" width="353" height="21"/>
+                    <rect key="frame" x="20" y="296" width="353" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

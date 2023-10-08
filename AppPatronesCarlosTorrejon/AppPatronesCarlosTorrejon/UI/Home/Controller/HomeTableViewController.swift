@@ -9,7 +9,7 @@ import UIKit
 
 //MARK: - PROTOCOLO -
 protocol HomeViewProtocol: AnyObject {
-    func navigateToDetail(with data: CharacterModel?)
+    func navigateToDetail(with data: AppleModel?)
     func updateViews()
 }
 
@@ -29,12 +29,12 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return viewModel?.dataCount ?? 0
     }
 
@@ -63,9 +63,9 @@ extension HomeTableViewController: HomeViewProtocol {
         tableView.reloadData()
     }
     
-    func navigateToDetail(with data: CharacterModel?) {
+    func navigateToDetail(with data: AppleModel?) {
         let nextVC = DetailViewController()
-        nextVC.viewModel = DetailViewModel(character: data, viewDelegate: nextVC)
+        nextVC.viewModel = DetailViewModel(apple: data, viewDelegate: nextVC)
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
