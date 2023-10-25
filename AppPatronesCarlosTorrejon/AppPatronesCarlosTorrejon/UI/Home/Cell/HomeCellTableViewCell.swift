@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeCellTableViewCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var viewCellHome: UIView!
     @IBOutlet weak var nameCellHome: UILabel!
@@ -19,23 +19,36 @@ class HomeCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         viewCellHome.layer.cornerRadius = 4.0
     }
-
+    
     override func prepareForReuse() {
+        super.prepareForReuse()
         nameCellHome.text = nil
         imageCellHome.image = nil
     }
     
     
-    func updateViews(data: AppleModel?) {
-        update(name: data?.name)
-        update(image: data?.image)
+    func updateViews(
+        data: AppleModel?
+    ) {
+        update(
+            name: data?.name
+        )
+        update(
+            image: data?.image
+        )
     }
     
-    private func update(name: String?) {
+    private func update(
+        name: String?
+    ) {
         nameCellHome.text = name ?? ""
     }
     
-    private func update(image: String?) {
-        imageCellHome.image = UIImage(named: image ?? "")
+    private func update(
+        image: String?
+    ) {
+        imageCellHome.image = UIImage(
+            named: image ?? ""
+        )
     }
 }

@@ -9,7 +9,6 @@ import Foundation
 
 //MARK: - PROTOCOLO -
 protocol DetailViewModelProtocol {
-    var appleData: AppleModel? { get }
     func onViewsLoaded()
 }
 
@@ -17,14 +16,17 @@ protocol DetailViewModelProtocol {
 final class DetailViewModel: DetailViewModelProtocol {
     
     private weak var viewDelegate: DetailViewProtocol?
-    var appleData: AppleModel?
-
-    init(apple: AppleModel?, viewDelegate: DetailViewProtocol?) {
+    private var appleData: AppleModel?
+    
+    init(
+        apple: AppleModel?,
+        viewDelegate: DetailViewProtocol?
+    ) {
         self.appleData = apple
         self.viewDelegate = viewDelegate
     }
-
+    
     func onViewsLoaded() {
-        viewDelegate?.updateViews()
+        viewDelegate?.updateViews(with: appleData)
     }
 }

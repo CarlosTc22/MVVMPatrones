@@ -12,8 +12,6 @@ protocol SplashViewModelProtocol {
     func onViewsLoaded()
 }
 
-
-
 //MARK: - CLASE -
 final class SplashViewModel {
     
@@ -22,7 +20,6 @@ final class SplashViewModel {
     init(viewDelegate: SplashViewProtocol?) {
         self.viewDelegate = viewDelegate
     }
-
     
     private func loadData() {
         viewDelegate?.showLoading(true)
@@ -32,8 +29,6 @@ final class SplashViewModel {
         }
     }
 }
-
-
 
 //MARK: - EXTENSION -
 extension SplashViewModel: SplashViewModelProtocol {

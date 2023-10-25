@@ -9,7 +9,9 @@ import UIKit
 
 //MARK: - PROTOCOLO -
 protocol HomeViewProtocol: AnyObject {
-    func navigateToDetail(with data: AppleModel?)
+    func navigateToDetail(
+        with data: AppleModel?
+    )
     func updateViews()
 }
 
@@ -17,7 +19,7 @@ protocol HomeViewProtocol: AnyObject {
 class HomeTableViewController: UITableViewController {
     
     var viewModel: HomeViewModelProtocol?
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
@@ -25,34 +27,60 @@ class HomeTableViewController: UITableViewController {
     }
     
     private func registerCells() {
-        tableView.register(UINib(nibName: "HomeCellTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+        tableView.register(
+            UINib(
+                nibName: "HomeCellTableViewCell",
+                bundle: nil
+            ),
+            forCellReuseIdentifier: "HomeCell"
+        )
     }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-
+    
+    override func numberOfSections(
+        in tableView: UITableView
+    ) -> Int {
+        
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+    
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        
         return viewModel?.dataCount ?? 0
     }
-
+    
     //Update views
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeCellTableViewCell else {
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "HomeCell",
+            for: indexPath
+        ) as? HomeCellTableViewCell else {
             return UITableViewCell()
         }
         
-        if let data = viewModel?.data(at: indexPath.row) {
-            cell.updateViews(data: data)
+        if let data = viewModel?.data(
+            at: indexPath.row
+        ) {
+            cell.updateViews(
+                data: data
+            )
         }
         return cell
     }
     
     //Select item
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.onItemSelected(at: indexPath.row)
+    override func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        viewModel?.onItemSelected(
+            at: indexPath.row
+        )
     }
 }
 
@@ -63,10 +91,18 @@ extension HomeTableViewController: HomeViewProtocol {
         tableView.reloadData()
     }
     
-    func navigateToDetail(with data: AppleModel?) {
+    func navigateToDetail(
+        with data: AppleModel?
+    ) {
         let nextVC = DetailViewController()
-        nextVC.viewModel = DetailViewModel(apple: data, viewDelegate: nextVC)
-        navigationController?.pushViewController(nextVC, animated: true)
+        nextVC.viewModel = DetailViewModel(
+            apple: data,
+            viewDelegate: nextVC
+        )
+        navigationController?.pushViewController(
+            nextVC,
+            animated: true
+        )
     }
     
 }

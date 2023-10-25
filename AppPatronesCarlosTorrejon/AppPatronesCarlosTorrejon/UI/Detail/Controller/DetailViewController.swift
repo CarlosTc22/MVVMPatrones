@@ -9,18 +9,20 @@ import UIKit
 
 //MARK: - PROTOCOLO -
 protocol DetailViewProtocol: AnyObject {
-    func updateViews()
+    func updateViews(
+        with appleData: AppleModel?
+    )
 }
 
 //MARK: - CLASE -
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var appleNameLabel: UILabel!
     @IBOutlet weak var appleDescriptionLabel: UILabel!
     @IBOutlet weak var appleImageView: UIImageView!
     
     var viewModel: DetailViewModelProtocol?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,11 +35,15 @@ class DetailViewController: UIViewController {
 
 //MARK: - EXTENSION -
 extension DetailViewController: DetailViewProtocol {
-    func updateViews() {
-        appleNameLabel.text = viewModel?.appleData?.name
-        if let imageName = viewModel?.appleData?.image {
-            appleImageView.image = UIImage(named: imageName)
+    func updateViews(
+        with appleData: AppleModel?
+    ) {
+        appleNameLabel.text = appleData?.name
+        if let imageName = appleData?.image {
+            appleImageView.image = UIImage(
+                named: imageName
+            )
         }
-        appleDescriptionLabel.text = viewModel?.appleData?.description
+        appleDescriptionLabel.text = appleData?.description
     }
 }
